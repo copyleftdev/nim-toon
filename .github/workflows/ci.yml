@@ -1,0 +1,23 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Nim
+        uses: jiro4989/setup-nim-action@v2
+        with:
+          nim-version: stable
+
+      - name: Run Handwritten Tests
+        run: nim c -r tests/test_toon.nim
+
+      - name: Run Fixture Tests
+        run: nim c -r tests/test_spec_fixtures.nim

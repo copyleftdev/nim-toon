@@ -1,0 +1,37 @@
+{
+  "meta": {
+    "title": "Chaos Suite",
+    "display name": "Ops Team",
+    "literal.path": "stays literal",
+    "flags": ["alpha", "true", "- item"],
+    "matrix": [[1, 2], [3, 4, 5]],
+    "empty": [],
+    "emptyObject": {}
+  },
+  "inventory": [
+    { "sku": "A1", "qty": 2, "unit price": 9.99 },
+    { "sku": "B2", "qty": 0, "unit price": 0 }
+  ],
+  "workflows": [
+    {
+      "steps": [
+        { "id": 1, "label": "boot" },
+        { "id": 2, "label": "ship" }
+      ],
+      "status": "active",
+      "note": "a:b",
+      "tags": ["ops,qa", "blue"]
+    },
+    {
+      "id": 2,
+      "checks": [["lint", "pass"], ["test", "warn"]],
+      "enabled": true
+    }
+  ],
+  "events": [
+    1,
+    { "type": "warn", "message": "disk full" },
+    ["x", "y"],
+    {}
+  ]
+}
