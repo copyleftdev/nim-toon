@@ -73,3 +73,7 @@ For GitHub publication, the repository already includes:
 - [LICENSE](/home/ops/Project/nim-toon/LICENSE)
 - [CONTRIBUTING.md](/home/ops/Project/nim-toon/CONTRIBUTING.md)
 - [ci.yml](/home/ops/Project/nim-toon/.github/workflows/ci.yml)
+
+## Contact
+
+Maintainer: `copyleftdev <copyleftdev@users.noreply.github.com>`
